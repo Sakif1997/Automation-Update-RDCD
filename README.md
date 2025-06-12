@@ -1,3 +1,69 @@
+# RDCD Automation Test Suite
+
+Comprehensive automated testing framework for RDCD workflows using Java, Maven, TestNG, and Selenium WebDriver.
+
+## Tech Stack
+
+- **Java**: Main programming language (JDK 8+ recommended).
+- **Maven**: Build and dependency management.
+- **TestNG**: Test framework for organizing and running tests.
+- **Selenium WebDriver**: Browser automation.
+- **JavaScript**: For dynamic web interactions (if used).
+- **Java AWT**: UI automation support.
+
+## Project Structure
+
+- `src/test/java/TestCase/`: Contains main and supporting test classes.
+  - `StageServerNameClearanceTest.java`
+  - `StageServerSamityAcceptance.java`
+  - `StageServerNineStepMemberCreation.java`
+- `Browser/BrowserSetupNew.java`: Browser setup and configuration.
+- `MemberInformationCOOP/`: Member management classes.
+- `Utilities/`: Utility and helper classes.
+- `testng.xml`: TestNG suite configuration.
+
+## Features
+
+- Automated login and workflow execution for multiple RDCD modules.
+- Member creation and management.
+- Budget selection, document attachment, and final submission.
+- Modular test cases for different workflow steps.
+- Parallel test execution via TestNG.
+
+## Prerequisites
+
+- **JDK 8+** (project currently uses Java 21, but source/target is set to 8)
+- **Maven**
+- **Browser drivers** (e\.g\., ChromeDriver)
+- **TestNG plugin** (for IDE integration)
+
+## How to Run
+
+1. Clone the repository:
+2. Navigate to the project directory:
+3. Install dependencies:
+4. Run all tests as defined in `testng.xml`:
+## Test Configuration
+
+- Test classes are managed via `testng.xml`:
+  - Runs `StageServerNameClearanceTest`, `StageServerSamityAcceptance`, and `StageServerNineStepMemberCreation` in parallel (thread-count: 5).
+- Update credentials and server URLs in the relevant login classes.
+- Set the correct browser driver path in `BrowserSetupNew.java`.
+
+## Troubleshooting
+
+- **Build warnings**: The project uses Java 21 but targets source/target 8, which is deprecated. Consider updating the source/target version in your Maven configuration.
+- **WebDriver errors**: Ensure browser and driver versions match.
+
+## Future Enhancements
+
+- Cross-browser and parallel testing.
+- CI/CD integration (e\.g\., GitHub Actions, Jenkins).
+- Enhanced reporting (e\.g\., Allure).
+
+## License
+
+This project is licensed under Sakif1997. See the `LICENSE` file for details.
 # Automation Script Analysis Report
 
 <img height="311" width="423" alt="test" src="https://res.cloudinary.com/dheiniqiw/image/upload/v1707107592/RDCD/rdcd1_mjm8nm.png" />
